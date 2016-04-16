@@ -30,11 +30,22 @@ a{
 	color: #0079bf;
 }
 .btn{
-	padding: 15px;
+	padding: 10px;
 	background-color: #09c;
 	border-radius:5px;
 	color: #fff;
 	display:inline-block;
+	opacity: 0.8;
+	-webkit-transition: all 150ms;
+		 -o-transition: all 150ms;
+			transition: all 150ms;
+}
+
+.btn:hover{
+	opacity: 1;
+	-webkit-transition: all 150ms;
+		 -o-transition: all 150ms;
+			transition: all 150ms;
 }
 .btn a{
 	color: #fff;
@@ -158,11 +169,15 @@ margin-top: 20px;
 	padding: 20px 0;
 }
 .author{
-	padding: 15px 0;
 	font-size:15px;
+	color:#777;
+}
+.author-single{
+	padding: 10px 0;
 }
 .blog{
 	padding-bottom: 20px;
+	min-height: 250px;
 }
 .blog p{
 	font-size: 20px;
@@ -197,29 +212,48 @@ margin-top: 20px;
    SIDEBAR
    ========================================================================== */
 .the-widget{
-	background-color:f5f5f5;
+	background-color:#f5f5f5;
+	margin-top: 20px;
 }
 .the-widget h2{
-	margin: 20px 0;
 	background-color: #172232;
 	color: #fff; 
 	font-size: 20px;
 	padding: 5px 10px;
 	border-bottom: 2px solid #444;
 	font-weight: normal;
+	letter-spacing:1px;
 }
-.the-widget li{
-	padding: 15px;
+.the-widget ul li{
 	list-style:none;
 }
 .the-widget ul li a{
+	padding: 15px;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	display: block;
 	text-decoration: none;
 	color: #172232;
 	font-size: 17px;
+	-webkit-transition: all 0.6s;
+	-o-transition: all 0.6s;
+	transition: all 0.6s;
+}
+.the-widget ul li a:hover{
+	color:#099;
+	-webkit-transition: all 0.6s;
+	-o-transition: all 0.6s;
+	transition: all 0.6s;
 }
 .the-widget ul li a:before{
-	content:">  ";
+	content:"- ";
 }
+.the-widget:last-of-type{
+	margin-bottom: 30px;
+}
+
+
 /* ==========================================================================
    FOOTER
    ========================================================================== */
