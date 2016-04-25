@@ -1,9 +1,9 @@
-<?php get_header(); ?> 
+ <?php get_header(); ?> 
 	
 <div class="page-content">
 	<div class="inner-content">
 		<div class="page-title">
-			<h1>Blog</h1>
+			<h1><?php single_tag_title("Tag Archive from: ", true); ?></h1>
 		</div>
 		<div class="contentleft">
 		<div class="blog">
@@ -41,4 +41,4 @@
 		<div class="clearfix"></div>
 	</div>
 </div>
-<?php get_footer(); ?>
+<?php get_footer(); ?> 

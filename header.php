@@ -2,6 +2,9 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/flexslider.css"/>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="<?php bloginfo( 'template_url' );?>/js/jquery.flexslider.js" ></script>
 		<meta charset="<?php bloginfo('charst'); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale: 1.0">
 		<title><?php bloginfo("name"); ?></title>

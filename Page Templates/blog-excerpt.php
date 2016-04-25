@@ -30,13 +30,16 @@ Template Name: Blog (excerpt)
 
 				<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				<div class="author">
-					Posted by
+					In <?php the_category("&nbsp;/&nbsp;"); ?> by
 					<a href="<?php echo get_author_posts_url(get_the_author_meta( "ID" )); ?>">
 						<?php the_author() ?>
 					</a>
 					on the <?php the_time("F j, Y"); ?></div>
 				
 				<p><?php the_excerpt(); ?></p>
+				<div class="tags">
+				<?php the_tags('Tags: ', '&nbsp;/&nbsp;'); ?>
+				</div>
 				<div class="btn"><a href="<?php the_permalink(); ?>">Read More</a></div>
 			</div>
 			<?php endwhile; wp_reset_query(); ?>

@@ -8,6 +8,18 @@
 </div>
 
 </div><!--  End of Container -->
+
+
+<script type="text/javascript">
+
+	// Can also be used with $(document).ready()
+	jQuery(window).load(function() {
+	  jQuery('.flexslider').flexslider({
+		animation: "slide"
+	  });
+	});
+</script>
+
 <?php wp_footer(); ?>
 </body>
 </html>

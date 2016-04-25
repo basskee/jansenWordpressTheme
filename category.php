@@ -3,7 +3,7 @@
 <div class="page-content">
 	<div class="inner-content">
 		<div class="page-title">
-			<h1>Blog</h1>
+			<h1><?php single_cat_title("Showing Posts from: ", true); ?></h1>
 		</div>
 		<div class="contentleft">
 		<div class="blog">
@@ -27,6 +27,7 @@
 					on the <?php the_time("F j, Y"); ?></div>
 				
 				<p><?php the_excerpt(); ?></p>
+
 				<div class="tags">
 				<?php the_tags('Tags: ', '&nbsp;/&nbsp;'); ?>
 				</div>
@@ -41,4 +42,4 @@
 		<div class="clearfix"></div>
 	</div>
 </div>
-<?php get_footer(); ?>
+<?php get_footer(); ?> 
