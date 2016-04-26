@@ -1,0 +1,33 @@
+/* 
+	@package jansen
+ */
+
+.jansen-general-form,
+.jansen-sidebar-preview{
+	display: inline-block;
+	float: left;
+}
+.jansen-sidebar-preview{
+	width: 280px;
+	background-color: #1f1f1f;
+	padding: 20px;
+	text-align: center;
+	margin-right: 20px;
+}
+.jansen-sidebar{
+	display: block;
+	text-align: center;
+}
+h1.jansen-username,
+h2.jansen-description{
+	font-weight: 100;
+	color:#fff;
+}
+h1.jansen-username{
+	font-size: 24px;
+	margin: 0 0 0 10px;
+}
+h2.jansen-description{
+	font-size: 13px;
+	margin: 0 0 0 20px;
+}
