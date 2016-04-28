@@ -58,6 +58,23 @@ function jansen_custom_settings() {
 
 	add_settings_section('jansen-contact-section', 'Contact Form', 'jansen_contact_section', 'admin_jansen_theme_contact');
 	add_settings_field('activate-form', 'Activate Contact Form', 'jansen_activate_contact', 'admin_jansen_theme_contact', 'jansen-contact-section');
+
+	//Custom CSS Options
+	register_setting('jansen-custom-css-options', 'jansen_css', 'jansen_sanitize_custom_css');
+	add_settings_section('jansen-custom-css-section', 'Custom CSS', 'jansen_custom_css_section_callback', 'admin_jansen_css');
+
+	add_settings_field('custom-css', 'Insert your Custom CSS', 'jansen_custom_css_callback', 'admin_jansen_css', 'jansen-custom-css-section');
+}
+
+function jansen_custom_css_section_callback() {
+	echo 'Customize Jansen Theme with your own CSS';
+}
+
+function jansen_custom_css_callback() {
+	$css = get_option('jansen_css');
+	$css = (empty($css)?'/* Jansen Theme Custom CSS */':$css);
+	echo '<div id="customCss">'.$css.'</div><textarea id="jansen_css" name="jansen_css" style="display:none; visibility:hidden">'.$css.'</textarea>';
+
 }
 
 function jansen_theme_options() {
@@ -144,6 +161,11 @@ function jansen_sanitize_twitter_handle($input) {
 	return $output;
 }
 
+function jansen_sanitize_custom_css($input) {
+	$output = esc_textarea($input);
+	return $output;
+}
+
 // Template submenu Functions
 function jansen_theme_create_page() {
 	//generation of admin page
@@ -158,7 +180,6 @@ function jansen_contact_form_page() {
 }
 
 function jansen_theme_settings_page() {
-	//generation of Settings page
-	echo '<h1>Jansen Custom CSS</h1>';
+	require_once (get_template_directory().'/inc/templates/jansen-custom-css.php');
 
 }
